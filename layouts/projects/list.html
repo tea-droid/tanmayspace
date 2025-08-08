@@ -33,8 +33,8 @@
 
 .file-system-view {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 40px;
   padding: 20px;
   min-height: 400px;
   background-color: var(--mac-white);
@@ -53,8 +53,7 @@
   cursor: pointer;
   padding: 8px;
   border-radius: 0;
-  max-width: 120px;
-  margin: 0 auto;
+  width: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -200,20 +199,16 @@ a.file-item {
 /* Grid Responsiveness */
 @media (max-width: 1024px) {
   .file-system-view {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 30px;
     padding: 15px;
-  }
-  
-  .file-item {
-    max-width: 100px;
   }
 }
 
 @media (max-width: 768px) {
   .file-system-view {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 25px;
     padding: 12px;
   }
   
@@ -230,8 +225,8 @@ a.file-item {
 
 @media (max-width: 480px) {
   .file-system-view {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 20px;
     padding: 10px;
   }
   
@@ -242,10 +237,6 @@ a.file-item {
   
   .file-name {
     font-size: 10px;
-  }
-  
-  .file-item {
-    max-width: 80px;
   }
   
   /* On mobile, show info on tap instead of hover */
