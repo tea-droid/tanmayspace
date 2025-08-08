@@ -1,17 +1,258 @@
 {{ define "main" }}
 <div class="projects-page-content">
-  <div class="projects-section">
+  <div class="file-system-view">
     {{ range .Pages }}
-      <div class="terminal-card">
-        <header>{{ .Title }}</header>
-        <div>
-          {{ .Content }}
-          {{ if .Params.github }}
-            <p><a href="{{ .Params.github }}" target="_blank" class="button">View on GitHub</a></p>
-          {{ end }}
+      <a href="{{ .RelPermalink }}" class="file-item">
+        <div class="file-icon">
+          <div class="folder-icon-graphic">
+            <div class="folder-tab"></div>
+            <div class="folder-body"></div>
+          </div>
         </div>
-      </div>
+        <div class="file-label">
+          <span class="file-name">{{ .Title }}</span>
+        </div>
+        <div class="file-hover-info">
+          <div class="hover-content">
+            {{ .Content }}
+            {{ if .Params.github }}
+              <p><span class="button">View on GitHub</span></p>
+            {{ end }}
+          </div>
+        </div>
+      </a>
     {{ end }}
   </div>
 </div>
+
+<style>
+/* File System View Styles */
+.projects-page-content {
+  padding: 0;
+}
+
+.file-system-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  min-height: 400px;
+  background-color: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  box-shadow: 
+    inset 2px 2px 0 var(--mac-dark-gray),
+    inset -1px -1px 0 var(--mac-white);
+}
+
+/* File Item Container */
+.file-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 0;
+  max-width: 120px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.file-item {
+  text-decoration: none;
+}
+
+.file-item:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.file-item:active .file-icon {
+  transform: translate(1px, 1px);
+}
+
+/* Folder Icon Graphic */
+.file-icon {
+  width: 64px;
+  height: 56px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.folder-icon-graphic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.folder-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 8px;
+  background: var(--mac-beige);
+  border: 2px solid var(--mac-black);
+  border-bottom: none;
+  box-shadow: 
+    inset -1px -1px 0 var(--mac-dark-gray),
+    inset 1px 1px 0 var(--mac-white);
+  z-index: 1;
+}
+
+.folder-body {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mac-beige);
+  border: 2px solid var(--mac-black);
+  box-shadow: 
+    2px 2px 0 var(--mac-dark-gray),
+    3px 3px 0 var(--mac-black),
+    inset -1px -1px 0 var(--mac-dark-gray),
+    inset 1px 1px 0 var(--mac-white);
+}
+
+/* Selected/Hover state for folder */
+.file-item:hover .folder-body,
+.file-item:hover .folder-tab {
+  background: var(--mac-gray);
+}
+
+/* File Label */
+.file-label {
+  text-align: center;
+  padding: 2px 4px;
+  max-width: 100%;
+  position: relative;
+}
+
+.file-name {
+  font-size: 11px;
+  font-family: Chicago, Monaco, "Courier New", monospace;
+  color: var(--mac-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Selected state */
+.file-item:hover .file-name {
+  background: var(--mac-black);
+  color: var(--mac-white);
+  padding: 1px 3px;
+  outline: 1px dotted var(--mac-white);
+  outline-offset: -1px;
+}
+
+/* Hover Info Popup */
+.file-hover-info {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: none;
+}
+
+.file-item:hover .file-hover-info {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.hover-content {
+  background: var(--mac-white);
+  border: 2px solid var(--mac-black);
+  padding: 12px;
+  min-width: 250px;
+  max-width: 350px;
+  box-shadow: 
+    3px 3px 0 var(--mac-black),
+    inset -1px -1px 0 var(--mac-dark-gray),
+    inset 1px 1px 0 var(--mac-white);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.hover-content p {
+  margin: 0.5em 0;
+}
+
+.hover-content .button {
+  margin-top: 8px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Grid Responsiveness */
+@media (max-width: 1024px) {
+  .file-system-view {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 20px;
+    padding: 15px;
+  }
+  
+  .file-item {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .file-system-view {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    padding: 12px;
+  }
+  
+  .file-icon {
+    width: 56px;
+    height: 48px;
+  }
+  
+  .hover-content {
+    min-width: 200px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-system-view {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 12px;
+    padding: 10px;
+  }
+  
+  .file-icon {
+    width: 48px;
+    height: 42px;
+  }
+  
+  .file-name {
+    font-size: 10px;
+  }
+  
+  .file-item {
+    max-width: 80px;
+  }
+  
+  /* On mobile, show info on tap instead of hover */
+  .file-item:active .file-hover-info {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+</style>
 {{ end }}
