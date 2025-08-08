@@ -2,25 +2,27 @@
 <div class="projects-page-content">
   <div class="file-system-view">
     {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="file-item">
-        <div class="file-icon">
-          <div class="folder-icon-graphic">
-            <div class="folder-tab"></div>
-            <div class="folder-body"></div>
+      <div class="file-grid-cell">
+        <a href="{{ .RelPermalink }}" class="file-item">
+          <div class="file-icon">
+            <div class="folder-icon-graphic">
+              <div class="folder-tab"></div>
+              <div class="folder-body"></div>
+            </div>
           </div>
-        </div>
-        <div class="file-label">
-          <span class="file-name">{{ .Title }}</span>
-        </div>
-        <div class="file-hover-info">
-          <div class="hover-content">
-            {{ .Content }}
-            {{ if .Params.github }}
-              <p><span class="button">View on GitHub</span></p>
-            {{ end }}
+          <div class="file-label">
+            <span class="file-name">{{ .Title }}</span>
           </div>
-        </div>
-      </a>
+          <div class="file-hover-info">
+            <div class="hover-content">
+              {{ .Content }}
+              {{ if .Params.github }}
+                <p><span class="button">View on GitHub</span></p>
+              {{ end }}
+            </div>
+          </div>
+        </a>
+      </div>
     {{ end }}
   </div>
 </div>
@@ -41,10 +43,15 @@
   overflow-y: auto;
   overflow-x: hidden;
   background-color: var(--mac-white);
-  border: 2px solid var(--mac-black);
-  box-shadow: 
-    inset 2px 2px 0 var(--mac-dark-gray),
-    inset -1px -1px 0 var(--mac-white);
+  border: none;
+  box-shadow: none;
+}
+
+/* Grid cell wrapper */
+.file-grid-cell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* File Item Container */
@@ -57,7 +64,6 @@
   padding: 8px;
   border-radius: 0;
   width: fit-content;
-  margin: 0 auto;
   text-decoration: none;
   color: inherit;
 }
