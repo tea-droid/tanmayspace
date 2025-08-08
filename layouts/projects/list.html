@@ -16,11 +16,7 @@
           </div>
           <div class="file-hover-info">
             <div class="hover-content">
-              {{ if .Params.summary }}
-                {{ .Params.summary }}
-              {{ else }}
-                {{ .Summary }}
-              {{ end }}
+              {{ .Summary }}
               {{ if .Params.github }}
                 <p><span class="button">View on GitHub</span></p>
               {{ end }}
