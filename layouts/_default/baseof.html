@@ -57,7 +57,7 @@
           <div class="window-zoom-box"></div>
           <div class="window-stripes"></div>
           <div class="window-title">
-            {{ if .IsHome }}Hello{{ else if and (eq .Kind "page") (eq .Section "") }}About{{ else if eq .Section "posts" }}{{ if .IsSection }}Posts{{ else }}{{ .Title }}{{ end }}{{ else if eq .Section "photos" }}{{ if .IsSection }}Photos{{ else }}{{ .Title }}{{ end }}{{ else }}{{ .Title }}{{ end }}
+            {{ if .IsHome }}Home{{ else if and (eq .Kind "page") (eq .Section "") }}About{{ else if eq .Section "posts" }}{{ if .IsSection }}Posts{{ else }}{{ .Title }}{{ end }}{{ else if eq .Section "photos" }}{{ if .IsSection }}Photos{{ else }}{{ .Title }}{{ end }}{{ else }}{{ .Title }}{{ end }}
           </div>
         </div>
         <div class="window-content">
