@@ -7,6 +7,21 @@
         </div>
       {{ end }}
     {{ end }}
+
+    
+    <!-- Image Section -->
+    <!-- {{ if .Params.image }}
+      <div class="project-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+      </div>
+    {{ end }} -->
+    
+    <!-- GitHub Button -->
+    {{ if .Params.github }}
+      <p><a href="{{ .Params.github }}" target="_blank" class="button">View on GitHub</a></p>
+    {{ end }}
+    
+    <!-- Main Content -->
     {{ .Content }}
   </article>
 {{ end }}
