@@ -1,6 +1,6 @@
 ---
 title: "Secure Instant Messaging System"
-date: 2024-01-15
+date: 2025-04-21
 github: "https://github.com/d3adp0et/secure-chat-application"
 summary: "This project was developed as part of CY6740: Network Security at Northeastern University. It demonstrates a secure, terminal-based chat system built using modern cryptographic techniques in Python."
 ---
