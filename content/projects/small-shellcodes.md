@@ -1,7 +1,7 @@
 ---
 title: "DuckyScript Payloads 4 Flipper"
-date: 2025-02-15
-github: "https://github.com/d3adp0et/DuckyScript-Payloads-4-Flipper"
+date: 2025-03-28
+github: "https://github.com/d3adp0et/Small-Shellcodes"
 summary: "ASAP (As Small As Possible) Shellcodes"
 ---
 
