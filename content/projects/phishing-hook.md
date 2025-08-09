@@ -1,5 +1,5 @@
 ---
-title: "DuckyScript Payloads 4 Flipper"
+title: "Phishing Hook"
 date: 2023-04-21
 github: "https://github.com/d3adp0et/Phishing-Hook"
 summary: "A Phishing Detection Sytem."
