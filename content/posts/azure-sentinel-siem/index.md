@@ -11,7 +11,7 @@ Like many aspiring cybersecurity professionals, I wanted to get hands-on experie
 
 Spoiler alert: It was easier than I thought, but way more powerful than I imagined.
 
-![Image 1: Azure VM Configuration](content/posts/azure-sentinel-siem/images/VM-creation-screenshot2.png)(description: Screenshot showing the Azure VM creation page with deadpoet-VM1 configuration, RDP port 3389 exposed, and network settings)
+![Image 1: Azure VM Configuration](images/VM-creation-screenshot2.png)(description: Screenshot showing the Azure VM creation page with deadpoet-VM1 configuration, RDP port 3389 exposed, and network settings)
 *Setting up my honeypot VM - intentionally exposed to see what happens*
 
 ## What Exactly Did I Build?
@@ -34,7 +34,7 @@ The architecture is straightforward but powerful:
 
 The first step was spinning up a Windows virtual machine. I named it "deadpoet-VM1" (yes, I'm a fan of poetry and irony). I deliberately exposed RDP (port 3389) to make it an attractive target for attackers. In a production environment, you'd never do this – but for learning? Perfect.
 
-![Image 2: Log Analytics Configuration](content/posts/azure-sentinel-siem/images/log-analytics-workspace-setup.png)(description: Screenshot showing the Log Analytics workspace configuration with name "deadpoet-LogAnalytics" and East US region selected)
+![Image 2: Log Analytics Configuration](images/log-analytics-workspace-setup.png)(description: Screenshot showing the Log Analytics workspace configuration with name "deadpoet-LogAnalytics" and East US region selected)
 *The brain of the operation - Log Analytics workspace where all the magic happens*
 
 ### Step 2: Connecting the Dots
@@ -56,7 +56,7 @@ SecurityEvent
 
 Simple? Yes. Effective? Absolutely. This rule catches successful system account logins – often a sign of privilege escalation or unauthorized access.
 
-![Image 3: Analytics Rule Creation](content/posts/azure-sentinel-siem/images/analytics-rule-with-KQL-logic.png)(description: Screenshot showing the analytics rule configuration with the KQL query, 5-minute frequency, and alert settings)
+![Image 3: Analytics Rule Creation](images/analytics-rule-with-KQL-logic.png)(description: Screenshot showing the analytics rule configuration with the KQL query, 5-minute frequency, and alert settings)
 *Creating my first detection rule - catching suspicious system account activity*
 
 ## The "Aha!" Moments
@@ -79,7 +79,7 @@ Setting up automated incident creation changed my perspective. Instead of manual
 
 This is how real SOC teams handle thousands of events per day without drowning in data.
 
-![Image 4: Alert Rule Summary](content/posts/azure-sentinel-siem/images/log-analytics-summary.png)(description: Screenshot showing the completed alert rule "Successful Local Sign Ins" with Medium severity, 5-minute frequency, and incident creation enabled)
+![Image 4: Alert Rule Summary](images/log-analytics-summary.png)(description: Screenshot showing the completed alert rule "Successful Local Sign Ins" with Medium severity, 5-minute frequency, and incident creation enabled)
 *The final rule configuration - automated detection running 24/7*
 
 ## Challenges and Lessons Learned
