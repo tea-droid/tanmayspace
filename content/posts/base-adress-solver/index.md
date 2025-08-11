@@ -1,6 +1,6 @@
 ---
 title: "Understanding FirmXRay and Base Address Solver Java file "
-date: 2024-06-25
+date: 2025-06-25
 read: "8 min read"
 ---
 ## FirmXRay
