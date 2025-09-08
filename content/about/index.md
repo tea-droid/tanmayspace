@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-Hello there, I am Tanmay Sharma, a passionate cybersecurity agent. I like to make intriquete and cool projects by combining the worlds of Security, Programming and Hardware. Unique enough?
+Hello there, I am Tanmay Sharma. I like to make intricate and cool projects by combining the worlds of Security, Programming and Hardware.
 
 Experienced Technical Lead and Project Intern with a background in cybersecurity, machine learning, and secure IoT solutions, particularly in research and educational settings. I have demonstrated ability in leading technical teams, building automation tools, and advancing cybersecurity initiatives, including secure network projects with Raspberry Pi and bot development for community management.
 
