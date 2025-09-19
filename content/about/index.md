@@ -6,6 +6,8 @@ Hello there, I am Tanmay Sharma. I like to make intricate and cool projects by c
 
 Experienced Technical Lead and Project Intern with a background in cybersecurity, machine learning, and secure IoT solutions, particularly in research and educational settings. I have demonstrated ability in leading technical teams, building automation tools, and advancing cybersecurity initiatives, including secure network projects with Raspberry Pi and bot development for community management.
 
+[LICENSE](https://www.credly.com/badges/4dcce657-cbad-4be2-b84e-c320ada65664/public_url)
+
 ## Skills
 
 <div class="skills-grid">
