@@ -9,7 +9,7 @@ tags: ["cybersecurity", "Pentest"]
 > This writeup was generated using an LLM (Claude) based on penetration testing notes available at: [GitHub Repository Link]
 
 **Target:** 10.0.2.3  
-**Date:** October 14, 2025  
+**Date:** August 25, 2025  
 **Result:** Root access achieved  
 
 ## Network Discovery
