@@ -132,7 +132,3 @@ If you're on the fence about building your own SIEM lab, my advice is simple: do
 - **Azure Free Tier**: $200 credit to get started
 - **GitHub**: My project repository (link in bio)
 - **Community**: r/azure, r/siem, and Azure Sentinel community
-
----
-
-*Are you building your own security lab? I'd love to hear about your experience! Drop a comment below or connect with me on LinkedIn.*
