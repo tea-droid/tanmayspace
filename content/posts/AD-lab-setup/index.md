@@ -1,7 +1,7 @@
 ---
-title: "Building A Vulnerable Active Directory Lab"
+title: "Building and Breaking the Active Directory"
 date: 2025-10-08
-read: "8 min read"
+read: "2 Hr read"
 tags: ["cybersecurity", "Active Direectory"]
 ---
 
