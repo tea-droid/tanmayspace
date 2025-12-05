@@ -1,12 +1,32 @@
 {{ define "main" }}
-<div class="posts-page-content">
-  <div class="posts-list">
+<div class="window-content">
+  <!-- File system header -->
+  <div class="file-system-header">
+    <div class="header-cell"></div>
+    <div class="header-cell name-header">Name</div>
+    <div class="header-cell size-header">Read Time</div>
+    <div class="header-cell type-header">Author</div>
+    <div class="header-cell date-header">Date Modified</div>
+  </div>
+  
+  <!-- File system items -->
+  <div class="file-system-items">
     {{ range .Pages }}
-      <div class="post-list-item">
-        <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        <span class="separator">—</span>
-        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="file-item">
+      <div class="file-icon">
+        <div class="doc-icon-small">
+          <div class="doc-lines-small">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
+      <div class="file-name">{{ .Title }}</div>
+      <div class="file-size">{{ if ge .ReadingTime 60 }}{{ div .ReadingTime 60 }} hr {{ mod .ReadingTime 60 }} min{{ else }}{{ .ReadingTime }} min{{ end }}</div>
+      <div class="file-type">{{ if .Params.author }}{{ .Params.author }}{{ else }}Anonymous{{ end }}</div>
+      <div class="file-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+    </a>
     {{ end }}
   </div>
 </div>
