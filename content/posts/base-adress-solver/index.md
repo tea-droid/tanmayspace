@@ -1,7 +1,7 @@
 ---
 title: "Understanding FirmXRay and Base Address Solver Java file "
+author: "Tanmay Sharma"
 date: 2025-07-02
-read: "8 min read"
 ---
 ## FirmXRay
 link : https://github.com/OSUSecLab/FirmXRay
