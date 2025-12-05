@@ -1,7 +1,7 @@
 ---
 title: "Building and Breaking the Active Directory"
+author: "Tanmay Sharma"
 date: 2025-10-08
-read: "2 Hr read"
 tags: ["cybersecurity", "Active Direectory"]
 ---
 
