@@ -17,7 +17,7 @@ In simple words, it's a phone book that can be accessed over a network which con
 
 <img width="868" height="461" alt="image" src="https://github.com/user-attachments/assets/68443969-8544-47bf-b8b5-f4043ae3fe96" />
 
-As this blog is more of my understanding rather than an essay on AD, I will keep it short:\n
+As this blog is more of my understanding rather than an essay on AD, I will keep it short:
 AD is used for:
 - Authenticating users and computers
 - Locating computers by name
