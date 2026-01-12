@@ -25,7 +25,7 @@ The sections below reflect how I approached each phase during this lab. Every at
 ## I. Initial Attack Vector
 This phase focused on achieving my first foothold inside the domain, typically with low privileges and limited visibility.
 Attacks performed:
-- LLMNR Poisoning
+- [LLMNR Poisoning](/subpages/llmnr-poisooning)
 - SMB Relay Attack
 - Gaining Initial Shell Access
 - IPv6 Attacks
