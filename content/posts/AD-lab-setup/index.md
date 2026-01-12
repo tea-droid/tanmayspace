@@ -1,5 +1,5 @@
 ---
-title: "Building and Breaking the Active Directory"
+title: "adlab"
 author: "Tanmay Sharma"
 date: 2025-10-08
 tags: ["cybersecurity", "Active Direectory"]
