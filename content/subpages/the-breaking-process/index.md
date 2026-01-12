@@ -4,18 +4,59 @@ _build:
   list: never
 ---
 
-Now I had a personally hosted AD lab and it was all mine to hack!
-I was so excited to "hack" it!
-But how though? Where do I start? What should my first step be? 
+Now I had a personally hosted AD lab and it was all mine to break.
+The obvious question was where to start.
 
-Lucklily course had a pretty neat section for Active Directory Pentesting. The course discussed 4 stages of attacking an Active Directory. Namely:
-	I. Initial Attack Vector
-	II. Post-Compromise Enumeration
-	III. Post-Compromise Attacks
-	IV. Post-Domain Compromise Attacks
+This was my first time seriously attacking Active Directory end to end, so I needed a clear structure rather than trial and error. What became apparent very quickly was that success in AD has far less to do with individual exploits and far more to do with methodical enumeration. Enumeration is not just a phase you pass through once, but something you return to after every new piece of access.
 
-...and some last resort attacks for when there is no big findings in a pentest
+Every foothold, escalation, and lateral movement I achieved in this lab came from gradually understanding how the environment was put together. As I learned more about the domain, new attack paths became visible, and earlier assumptions often had to be revised. In that sense, Active Directory rewards careful observation more than speed or creativity.
 
-I will now discuss my understanding for each of these categories here.
+To keep myself organized, I broke the attack process into the following phases:
 
-![test](images/llmnr.png)
+I. Initial Attack Vector
+II. Post-Compromise Enumeration
+III. Post-Compromise Attacks
+IV. Post-Domain Compromise Attacks
+
+I also explored a set of last-resort Active Directory attacks for cases where no clear escalation paths were immediately available.
+
+The sections below reflect how I approached each phase during this lab. Every attack listed is something I personally attempted and documented, with separate pages detailing how I performed each one and what I learned along the way.
+
+## I. Initial Attack Vector
+This phase focused on achieving my first foothold inside the domain, typically with low privileges and limited visibility.
+Attacks performed:
+- LLMNR Poisoning
+- SMB Relay Attack
+- Gaining Initial Shell Access
+- IPv6 Attacks
+- Passback Attacks
+
+## II. Post-Compromise Enumeration
+Once I had initial access, enumeration became the most important activity. This was the phase where the environment started to make sense, and where most of my progress originated.
+Enumeration performed using:
+- ldapdomaindump
+- BloodHound
+- PlumHound
+- PingCastle
+
+## III. Post-Compromise Attacks
+Armed with a clearer picture of domain relationships and misconfigurations, I moved into privilege escalation and lateral movement.
+Attacks performed:
+- Pass-the-Hash and Pass-the-Ticket Attacks
+- Kerberoasting
+- Token Impersonation
+- LNK File Attacks
+- Group Policy Preferences Attacks
+- Credential Dumping
+
+## IV. Post-Domain Compromise Attacks
+After reaching domain-level compromise, I focused on understanding what full control actually enables and how persistence is established.
+Attacks performed:
+- Dumping NTDS.dit
+- Golden Ticket Attack
+- Last Resort Active Directory Attacks
+
+Finally, I explored additional techniques that can still be relevant when more direct attack paths fail.
+
+The goal of this blog is to document how I approached breaking Active Directory for the first time, highlight the mistakes and assumptions I made along the way, and demonstrate a structured understanding of how AD attacks progress from initial access to full domain compromise.
+
