@@ -66,7 +66,7 @@ Now after the installation finishes. Click on "Promote this server to a domain c
 Choose a password in the domain controller options
 	What I used = `P@$$w0rd!` (same as the admin user account)
 
-Hi next up until the Installation tab (make sure it said "All prerequisite checks pased successfully" in the prerequisites tab),  then click Install.
+Hit 'next' up until the Installation tab (make sure it said "All prerequisite checks pased successfully" in the prerequisites tab),  then click Install.
 	This will log you out and reboot automatically
 
 Now Log in as MARVEL\Administrator with password `P@$$w0rd!`
