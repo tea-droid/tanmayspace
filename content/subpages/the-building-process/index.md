@@ -61,13 +61,13 @@ Server Manager -> Manage Tab -> Add roles and Features -> Add Roles and Features
 
 **Step 6**
 Now after the installation finishes. Click on "Promote this server to a domain controller" and select "Add a new forest" as the deployment operation. (Name it whatever you like and hit next)
-	What I named = MARVEL.local
+    What I named = MARVEL.local
 
 Choose a password in the domain controller options
-	What I used = `P@$$w0rd!` (same as the admin user account)
+    What I used = `P@$$w0rd!` (same as the admin user account)
 
 Hit 'next' up until the Installation tab (make sure it said "All prerequisite checks pased successfully" in the prerequisites tab),  then click Install.
-	This will log you out and reboot automatically
+    This will log you out and reboot automatically
 
 Now Log in as MARVEL\Administrator with password `P@$$w0rd!`
 
@@ -75,7 +75,7 @@ Now Log in as MARVEL\Administrator with password `P@$$w0rd!`
 **Step 7**
 Last thing we need to add is the certification services for some attacks later.
 Take the same steps as in step 5 but this time make sure "Active Directory Certificate Services" is ticked. 
-	Certificate services are used to verify identities in a DC. Allows us to use LDAPS
+    Certificate services are used to verify identities in a DC. Allows us to use LDAPS
 
 Then continue following the step 5 steps again to install.
 
