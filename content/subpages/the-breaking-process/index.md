@@ -17,3 +17,5 @@ Lucklily course had a pretty neat section for Active Directory Pentesting. The c
 ...and some last resort attacks for when there is no big findings in a pentest
 
 I will now discuss my understanding for each of these categories here.
+
+![test](images/llmnr.png)
