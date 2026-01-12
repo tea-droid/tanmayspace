@@ -1,7 +1,6 @@
 ---
 title: "The Breaking Process"
-_build:
-  list: never
+
 ---
 
 Now I had a personally hosted AD lab and it was all mine to hack!
