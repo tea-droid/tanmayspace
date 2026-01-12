@@ -26,35 +26,35 @@ The sections below reflect how I approached each phase during this lab. Every at
 This phase focused on achieving my first foothold inside the domain, typically with low privileges and limited visibility.
 Attacks performed:
 - [LLMNR Poisoning](/subpages/llmnr-poisoning)
-- SMB Relay Attack
-- Gaining Initial Shell Access
-- IPv6 Attacks
-- Passback Attacks
+- [SMB Relay Attack](/subpages/smb-relay-attack)
+- [Gaining Initial Shell Access](/subpages/ini-shell-access)
+- [IPv6 Attacks](/subpages/ipv6)
+- [Passback Attacks](/subpages/)
 
 ## II. Post-Compromise Enumeration
 Once I had initial access, enumeration became the most important activity. This was the phase where the environment started to make sense, and where most of my progress originated.
 Enumeration performed using:
-- ldapdomaindump
-- BloodHound
-- PlumHound
-- PingCastle
+- [ldapdomaindump](/subpages/)
+- [BloodHound](/subpages/)
+- [PlumHound](/subpages/)
+- [PingCastle](/subpages/)
 
 ## III. Post-Compromise Attacks
 Armed with a clearer picture of domain relationships and misconfigurations, I moved into privilege escalation and lateral movement.
 Attacks performed:
-- Pass-the-Hash and Pass-the-Ticket Attacks
-- Kerberoasting
-- Token Impersonation
-- LNK File Attacks
-- Group Policy Preferences Attacks
-- Credential Dumping
+- [Pass-the-Hash and Pass-the-Ticket Attacks](/subpages/)
+- [Kerberoasting](/subpages/)
+- [Token Impersonation](/subpages/)
+- [LNK File Attacks](/subpages/)
+- [Group Policy Preferences Attacks](/subpages/)
+- [Credential Dumping](/subpages/)
 
 ## IV. Post-Domain Compromise Attacks
 After reaching domain-level compromise, I focused on understanding what full control actually enables and how persistence is established.
 Attacks performed:
-- Dumping NTDS.dit
-- Golden Ticket Attack
-- Last Resort Active Directory Attacks
+- [Dumping NTDS.dit](/subpages/)
+- [Golden Ticket Attack](/subpages/)
+- [Last Resort Active Directory Attacks](/subpages/)
 
 Finally, I explored additional techniques that can still be relevant when more direct attack paths fail.
 
