@@ -1,6 +1,7 @@
 ---
 title: "The Building Process"
-
+_build:
+  list: never
 ---
 
 
