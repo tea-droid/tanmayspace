@@ -10,7 +10,7 @@
 	2. A good time to run is - early in moring or after lunch, basically after a break when people are logging in into their computers and are GENERATING A LOT OF TRAFFIC
 	3. Do not run vuln scans (eg nessus) at the same time
 2. An event occurs...
-   ![Pasted image 20251124133806](Pasted image 20251124133806.png)
+   ![Pasted image 20251124133806](Pasted-image-20251124133806.png)
 3. Get Hashes on responder (NTLMv2 mostly)
 4. Crack the hash using something like hashcat 
 
