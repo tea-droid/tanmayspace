@@ -1,3 +1,8 @@
+---
+title: "The Breaking Process"
+_build:
+  list: never
+---
 
 #### What?
 Instead of cracking hashes gathered with Responder, we can instead relay those hashes to specific machines and potentially gain access.
