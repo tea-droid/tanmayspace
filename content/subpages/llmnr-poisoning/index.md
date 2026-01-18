@@ -8,7 +8,6 @@ _build:
 -> A general idea of how LLMNR is leveraged for an attack:  
 ![llmnr](images/llmnr.png)
 
----
 
 ## Basic Steps:
 1. Run Responder - `sudo responder -I tun0 -dwP`
@@ -21,7 +20,10 @@ _build:
 4. Crack the hash using something like hashcat 
 
 
-----
+## Lab
+
+1.  `nmap `
+
 
 ## Mitigation
 
@@ -31,10 +33,3 @@ _build:
 - If LLMNR/NBT-NS is required and/or cannot be disabled
 	1. Require Network Access Control.
 	2. Require strong user passwords (e.g., >14 characters and limit common word usage). The more complex and long the password, the harder it is for an attacker to crack the hash.
-
-
----
-
-## Lab
-
-1.  `nmap `
