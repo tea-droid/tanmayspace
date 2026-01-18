@@ -84,12 +84,23 @@ Kept the mitm6 and ntlmrelay running(still on the network) and when the administ
 
 ## Mitigation:
 
-1. IPv6 poisoning abuses the fact that Windows queries for an IPv6 addresses in IPv4-only environments. If you do not use IPv6 internally, the safest way to prevent mitm6 is to block DHCPv6 traffic and incoming router advertisements in Windows Firewall via Group Policy. Disabling IPv6 entirely may have unwanted side effects.
-   Setting the following predefined rules to Block instead of Allow prevents the attack from working:
-	- (Inbound) Core Networking - Dynamic Host configuration Protocol for IPv6(DHCPv6-In)
-	- (Inbound) Core Networking - Router Advertisement (ICMPv6-In)
-	- (Outbound) Core Networking - Dynamic Host Configuration Protocol for IPv6(DHCPv6-Out)
+1. **IPv6 Poisoning Prevention**
+   
+   IPv6 poisoning abuses the fact that Windows queries for IPv6 addresses in IPv4-only environments. If you do not use IPv6 internally, the safest way to prevent mitm6 is to block DHCPv6 traffic and incoming router advertisements in Windows Firewall via Group Policy. Disabling IPv6 entirely may have unwanted side effects.
+   
+   Set the following predefined rules to **Block** instead of **Allow** to prevent the attack from working:
+   - (Inbound) Core Networking - Dynamic Host Configuration Protocol for IPv6 (DHCPv6-In)
+   - (Inbound) Core Networking - Router Advertisement (ICMPv6-In)
+   - (Outbound) Core Networking - Dynamic Host Configuration Protocol for IPv6 (DHCPv6-Out)
 
-2.  If WPAD is not in use internally, disable it via Group Policy and by disabling the 'WinHttpAutoProxySvc' service.
-3. Relaying to LDAP and LDAPS can only be mitigated by enabling both LDAP signing and LDAP channel binding.
-4. Consider Administrative users to the Protected Users group or marking them as Account is sensitive and cannot be delegated, which will prevent any impersonation of that user via delegation.
+2. **WPAD Mitigation**
+   
+   If WPAD is not in use internally, disable it via Group Policy and by disabling the `WinHttpAutoProxySvc` service.
+
+3. **LDAP Relay Mitigation**
+   
+   Relaying to LDAP and LDAPS can only be mitigated by enabling both LDAP signing and LDAP channel binding.
+
+4. **Administrative User Protection**
+   
+   Consider adding administrative users to the Protected Users group or marking them as "Account is sensitive and cannot be delegated," which will prevent any impersonation of that user via delegation.
