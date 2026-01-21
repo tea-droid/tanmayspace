@@ -50,35 +50,36 @@ ntlmrelay -6 -t ldaps://192.168.138.236 -wh fakewpad.marvel.local -l lootme
 -wh is for wpad (fake)
 -l is for loot (the term lootme can be anything)
 ```
-![[Pasted image 20251129185935.png]]
+![Pasted image 20251129185935.png](images/Pasted-image-20251129185935.png)
 
 **Step 3:** 
-Run the command in step 1, i.e., mitm6 ![[Pasted image 20251129190305.png]]
+Run the command in step 1, i.e., mitm6 ![Pasted image 20251129190305.png](images/Pasted-image-20251129190305.png)
 
-![[Pasted image 20251129192424.png]]
+![Pasted image 20251129192424.png](images/Pasted-image-20251129192424.png)
 
 #### Findings:
 After this a lootme folder was created in the base folder with all this information:
-![[Pasted image 20251129192536.png]]
+![Pasted image 20251129192536.png](images/Pasted-image-20251129192536.png)
+
 this is from the tool called  "ldap doamin dump"
 
 here we got informations like:
 - what computers are in the domain
-  ![[Pasted image 20251129192806.png]]
+  ![Pasted image 20251129192806.png](images/Pasted-image-20251129192806.png)
   Goal: To find computers running older OS as they tend to have more vulnerabilities!
 - Look at the Domain groups present in the domain
-  ![[Pasted image 20251129193340.png]]
+  ![Pasted image 20251129193340.png](images/Pasted-image-20251129193340.png)
   Goal: Understand the AD better
 - Look at the "Domain users"(list of users) and "Domain users by group"(list of users sorted by respective group names)
-  ![[Pasted image 20251129194522.png]]
+  ![Pasted image 20251129194522.png](images/Pasted-image-20251129194522.png)
   GOAL: Identify high value targets
 
 
 
 **Step 4:**
-Kept the mitm6 and ntlmrelay running(still on the network) and when the administrator actually logged in (Event)![[Pasted image 20251129202529.png]] 
+Kept the mitm6 and ntlmrelay running(still on the network) and when the administrator actually logged in (Event)![Pasted image 20251129202529.png](images/Pasted-image-20251129202529.png) 
 ,,,,mitm6 managed to create a totally new user that had Enterprise Admins level of access
-![[Pasted image 20251129202907.png]]
+![Pasted image 20251129202907.png](images/Pasted-image-20251129202907.png)
 
 ---
 
