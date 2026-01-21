@@ -78,7 +78,7 @@ here we got informations like:
 
 **Step 4:**
 Kept the mitm6 and ntlmrelay running(still on the network) and when the administrator actually logged in (Event)![Pasted image 20251129202529.png](images/Pasted-image-20251129202529.png) 
-,,,,mitm6 managed to create a totally new user that had Enterprise Admins level of access
+....mitm6 managed to create a totally new user that had Enterprise Admins level of access
 ![Pasted image 20251129202907.png](images/Pasted-image-20251129202907.png)
 
 ---
