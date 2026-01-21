@@ -105,3 +105,13 @@ Kept the mitm6 and ntlmrelay running(still on the network) and when the administ
 4. **Administrative User Protection**
    
    Consider adding administrative users to the Protected Users group or marking them as "Account is sensitive and cannot be delegated," which will prevent any impersonation of that user via delegation.
+
+---
+
+## What next?
+
+There are many more type of attacks that can help in getting the first foothold into a system.
+It greatly depends on the environment we are attacking. Sometimes none of the steps we took so far would work and we would need to resort to less common attacks such as a Passback attack which in laymen terms can be stated as "Printer Hacking". For more information on such attacks, read: https://www.mindpointgroup.com/blog/how-to-hack-through-a-pass-back-attack
+
+
+For now we will carry on with Post-compromise Enumeration!
