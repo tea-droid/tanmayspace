@@ -29,7 +29,6 @@ Attacks performed:
 - [SMB Relay Attack](/subpages/smb-relay-attack)
 - [Gaining Initial Shell Access](/subpages/ini-shell-access)
 - [IPv6 Attacks](/subpages/ipv6)
-- [Passback Attacks](/subpages/)
 
 ## II. Post-Compromise Enumeration
 Once I had initial access, enumeration became the most important activity. This was the phase where the environment started to make sense, and where most of my progress originated.
