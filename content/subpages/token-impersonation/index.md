@@ -21,7 +21,7 @@ Pop a shell and load incognito
 
 ## How I went about it
 
-Followed the "Gaining shell" note and basically got a shell on fcastle using the password via metasploit -> [[III. Gaining Shell Access]]  
+Followed the "Gaining shell" note and basically got a shell on fcastle using the password via metasploit -> [Gaining Initial Shell Access](/subpages/ini-shell-access)  
 ![Pasted image 20251218195544](images/Pasted-image-20251218195544.png)
 
 
