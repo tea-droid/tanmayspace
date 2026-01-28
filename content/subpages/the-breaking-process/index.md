@@ -41,19 +41,19 @@ Enumeration performed using:
 ## III. Post-Compromise Attacks
 Armed with a clearer picture of domain relationships and misconfigurations, I moved into privilege escalation and lateral movement.
 Attacks performed:
-- [Pass-the-Hash and Pass-the-Ticket Attacks](/subpages/)
-- [Kerberoasting](/subpages/)
-- [Token Impersonation](/subpages/)
-- [LNK File Attacks](/subpages/)
-- [Group Policy Preferences Attacks](/subpages/)
-- [Credential Dumping](/subpages/)
+- [Pass-the-Hash and Pass-the-Ticket Attacks](/subpages/passing-hash&tickets)
+- [Kerberoasting](/subpages/kerberoasting)
+- [Token Impersonation](/subpages/token-impersonation)
+- [LNK File Attacks](/subpages/lnk-f-attack)
+- [Group Policy Preferences Attacks](/subpages/gpp-attack)
+- [Credential Dumping](/subpages/cred-dump)
 
 ## IV. Post-Domain Compromise Attacks
 After reaching domain-level compromise, I focused on understanding what full control actually enables and how persistence is established.
 Attacks performed:
-- [Dumping NTDS.dit](/subpages/)
-- [Golden Ticket Attack](/subpages/)
-- [Last Resort Active Directory Attacks](/subpages/)
+- [Dumping NTDS.dit](/subpages/dump-ntds)
+- [Golden Ticket Attack](/subpages/golden-ticket-attack)
+- [Last Resort Active Directory Attacks](/subpages/last-resort-ad-attacks)
 
 Finally, I explored additional techniques that can still be relevant when more direct attack paths fail.
 
