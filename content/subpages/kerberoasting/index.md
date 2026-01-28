@@ -17,9 +17,10 @@ Step 2: Crack the hash
 
 ![Pasted image 20251206182023](images/Pasted-image-20251206182023.png)  
 
--> now all i did was, took this hash and cracked it using hashcat  
 
+-> now all i did was, took this hash and cracked it using hashcat  
 `hashcat -m 13100 krb.txt /usr/share/wordlist/rockyou.txt`   
+
 ![Pasted image 20251206182542](images/Pasted-image-20251206182542.png)  
 
 
