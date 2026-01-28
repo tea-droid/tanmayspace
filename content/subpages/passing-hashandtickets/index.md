@@ -56,9 +56,8 @@ To define a module just do `-M <name>` at the end, eg: `crackmapexec smb 192.168
 ![Pasted image 20251203025511](images/Pasted-image-20251203025511.png)  
 
 
-----
 
-## Lab
+## How I went about it
 
 
 ### Trying to pass the Password
