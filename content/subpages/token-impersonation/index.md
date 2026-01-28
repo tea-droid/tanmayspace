@@ -7,14 +7,12 @@
 	1. **Delegate** - Created for logging into a machine or using Remote Desktop (Common)(Target in this note)
 	2. **Impersonate** - "non-interactive" such as attaching a network drive or a domain logon script. Eg: a script that accesses some server to fetch something will have this type of token.
 
----
 ## Process (one of many different ways)
 
 Step 1:  
 Pop a shell and load incognito
 
 
----
 
 ## Lab
 
@@ -64,7 +62,6 @@ proof this worked:
 secretsdump on DC should only work if done as a domain admin, so the above thing should work 
 
 
----
 ## Mitigation
 
 1. Limit user/group token creation permission 
