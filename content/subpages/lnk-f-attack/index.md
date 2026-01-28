@@ -1,3 +1,9 @@
+---
+title: "LNK File Attack"
+_build:
+  list: never
+---
+
 *(also called URL File Attack)*  
 
 
