@@ -122,25 +122,25 @@ secretsdump.py MARVEL.local/fcastle:'Password1'@192.168.138.137
 secretsdump.py administrator:@192.168.138.137 -hashes <NT:LM>
 ```
 
--> grab any and all hashes/secrets
--> main things: 
-	-> SAM Hashes - administrator acc and user acc 
-	-> Guest acc and WDAGUtility Account Hashes do no matter (?)
-	-> Crack DCC2 Hashes
--> During enumeration there was this fact that we should be on the lookout for old machines....one of the reasons is that that have something called "WDIGEST" that is a older protocol that is enabled by default on olde windows machines (windows 7/8 , 2008 R2 server/2012 server etc not sure)
-So if a domain admin has previously visited a now compromised machine we will be able to see their password in clear text (WHAT?) 
-So they can be present in secretsdump
-	-> An attack is possible here: flip the switch 'on' for wdigest on any machine that has it disabled and you can get the passwords later! (Watering hole attack)
-	-> when doing this on pentest: flip the switch back 'off', otherwise the system becomes more vulnerable (BAD)
+-> grab any and all hashes/secrets  
+-> main things:  
+	-> SAM Hashes - administrator acc and user acc  
+	-> Guest acc and WDAGUtility Account Hashes do no matter (?)  
+	-> Crack DCC2 Hashes  
+-> During enumeration there was this fact that we should be on the lookout for old machines....one of the reasons is that that have something called "WDIGEST" that is a older protocol that is enabled by default on olde windows machines (windows 7/8 , 2008 R2 server/2012 server etc not sure)  
+So if a domain admin has previously visited a now compromised machine we will be able to see their password in clear text (WHAT?)  
+So they can be present in secretsdump  
+	-> An attack is possible here: flip the switch 'on' for wdigest on any machine that has it disabled and you can get the passwords later! (Watering hole attack)  
+	-> when doing this on pentest: flip the switch back 'off', otherwise the system becomes more vulnerable (BAD)  
 
 
-do this pass the hash to EVERY MACHINE POSSIBLE
+do this pass the hash to EVERY MACHINE POSSIBLE  
 
 ---
 
 ## Mitigation
 
-Hard to completely prevent, but can make it harder to achive:
+Hard to completely prevent, but can make it harder to achive:  
 - Limit account re-use:
 	- Avoid re-useing local admin password
 	- Disable Guest and Administrator accounts
