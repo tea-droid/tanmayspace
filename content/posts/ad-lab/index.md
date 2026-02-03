@@ -10,7 +10,7 @@ note: if learning about the attacks on AD directory is the goal, check out: http
 According to microsoft's website, Active Directory (AD) provides the methods for storing directory data and making this data available to network users and administrators.  
 In simple words, it's a phone book that can be accessed over a network which contains information on computers, user, printers etc. Authentication on windows is done through Kerberos and Kerberos Tickets. For other systems (linux, mac) it uses protocols like RADIUS, LDAP (Lightweight Directory Access Protocol).  
 
-![Pasted image 20251201125956](images/Pasted-image-20251201125956.png)
+![admeme1](images/admeme1.jpeg)
 
 As this blog is more of my understanding rather than an essay on AD, I will keep it short:    
 AD is used for:
