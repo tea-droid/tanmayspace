@@ -132,8 +132,8 @@ Experienced Technical Lead and Project Intern with a background in cybersecurity
     <div>
       <strong>Northeastern University</strong><br>
       <em>Master of Science, Cybersecurity</em><br>
-      <small>Boston, MA | GPA: 3.58/4.00</small>
-      <p><strong>Relevant Coursework:</strong> Network Security, Binary Exploitation, Reverse Engineering, Security Risk and Management, Cyberlaw</p>
+      <small>Boston, MA | GPA: 3.70/4.00</small>
+      <p><strong>Relevant Coursework:</strong> Network Security, Binary Exploitation, Reverse Engineering, Linux Rootkit Development, Security Risk and Management, Cyberlaw</p>
     </div>
   </div>
   
