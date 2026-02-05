@@ -57,6 +57,20 @@ Experienced Technical Lead and Project Intern with a background in cybersecurity
       </ul>
     </div>
   </div>
+
+  <div class="terminal-card">
+    <header>September 2024 – August 2025</header>
+    <div>
+      <strong>Null NEU, Northeastern University</strong><br>
+      <em>Outreach Director, FOSS Contributor & Researcher</em><br>
+      <small>Boston, MA</small>
+      <ul>
+        <li>Contributed to the club's open-source GitHub repository</li>
+        <li>Organized and Outreached for Null CTF event - Hades</li>
+        <li>Facilitated outreach to security professionals and meetups, securing guest speakers to enhance the club's events and reputation</li>
+      </ul>
+    </div>
+  </div>
   
   <div class="terminal-card">
     <header>September 2023 – November 2023</header>
@@ -71,7 +85,6 @@ Experienced Technical Lead and Project Intern with a background in cybersecurity
       </ul>
     </div>
   </div>
-
   <div class="terminal-card">
     <header>September 2024 – August 2025</header>
     <div>
