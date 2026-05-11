@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    {{ if not (or (eq .Title "About") (eq .Section "about")) }}
+    {{ if not (or (eq .Title "Background") (eq .Section "about")) }}
       {{ if .Date }}
         <div class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>

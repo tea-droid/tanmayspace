@@ -323,6 +323,13 @@ nav {
 }
 
 /* ===================================
+   MOBILE HAMBURGER MENU (mobile-only; hidden on desktop)
+   =================================== */
+.mobile-menu {
+    display: none;
+}
+
+/* ===================================
    MAIN CONTENT - MAC WINDOW
    =================================== */
 main {
@@ -1473,6 +1480,83 @@ article {
         margin-bottom: 0.5em;
         width: auto;
     }
+
+    /* Hamburger menu — shown only on mobile, between top nav and window title bar */
+    .mobile-menu {
+        display: block;
+        margin: 6px -10px 0 -10px;
+        background: var(--mac-gray);
+        border-bottom: 2px solid var(--mac-black);
+        box-shadow:
+            inset -1px -1px 0 var(--mac-dark-gray),
+            inset 1px 1px 0 var(--mac-white);
+    }
+
+    .mobile-menu-toggle {
+        list-style: none;
+        cursor: pointer;
+        padding: 4px 14px;
+        font-family: Chicago, Monaco, "Courier New", monospace;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--mac-black);
+        user-select: none;
+        display: inline-block;
+    }
+
+    .mobile-menu-toggle::-webkit-details-marker,
+    .mobile-menu-toggle::marker {
+        display: none;
+        content: "";
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid var(--mac-black);
+        background: var(--mac-beige);
+    }
+
+    .mobile-menu-list li {
+        margin: 0;
+        border-bottom: 1px solid var(--mac-dark-gray);
+    }
+
+    .mobile-menu-list li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu-list a {
+        display: block;
+        padding: 10px 16px;
+        color: var(--mac-black);
+        text-decoration: none;
+        font-family: Chicago, Monaco, "Courier New", monospace;
+        font-size: 14px;
+    }
+
+    .mobile-menu-list a:hover,
+    .mobile-menu-list a:active {
+        background: var(--mac-black);
+        color: var(--mac-white);
+    }
+
+    /* Hide retro scrollbar decoration on the title bar */
+    .window-stripes {
+        display: none;
+    }
+
+    /* Content fills the rest of the mobile viewport */
+    main {
+        margin: 8px 0 0 0;
+        max-width: 100%;
+    }
+
+    .window-content {
+        padding: 12px;
+        flex: 1;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1977,37 +2061,243 @@ strong {
 
 @media (max-width: 768px) {
   .mac-sidebar {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px 0;
-    padding: 10px;
-    background: var(--mac-gray);
-    border: 2px solid var(--mac-black);
-    box-shadow: 
-      inset -1px -1px 0 var(--mac-dark-gray),
-      inset 1px 1px 0 var(--mac-white);
-    bottom: auto;
-  }
-  
-  .mac-icon:has(.trash-icon) {
-    margin-top: 0; /* Reset margin-top */
-    padding-top: 0 !important; /* Reset padding-top with important to override */
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .mac-sidebar {
-    gap: 10px;
-    bottom: auto;
-  }
-  
-  .mac-icon {
-    width: 48px;
-    height: 48px;
-  }
-  
   .icon-label {
     font-size: 9px;
   }
+}
+
+/* ===================================
+   MOBILE LAYOUT REDESIGN
+   Scoped to mobile only — desktop untouched.
+   Layout/positioning only — existing in-page content styling
+   (section headers, cards, borders, backgrounds) is preserved.
+   White compact .window-content, sticky bottom = single gray
+   icon bar + fixed MIT license footer beneath it.
+   =================================== */
+
+/* Footer element exists on every page but is mobile-only */
+.mobile-footer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* === HIDE === */
+    .window-titlebar { display: none !important; }
+    .mobile-menu { display: none !important; }
+    html::after { display: none !important; }
+    /* Drop the beige bezel side borders — content goes edge to edge. */
+    body::before { display: none !important; }
+    body::after { display: none !important; }
+    html::before { display: none !important; }
+
+    /* === PAGE-LEVEL LAYOUT ===========================================
+       Let the page scroll naturally. body grows with content; html
+       provides outer scrolling. */
+    html {
+        padding: 0 !important;
+    }
+    body.terminal {
+        height: auto !important;
+        max-height: none !important;
+        min-height: 100vh;
+        overflow-y: visible !important;
+        overflow-x: hidden !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    /* Container: drop gray dithered desktop pattern; white background
+       so it blends with the fixed nav and content area. Reserve room
+       at top (for the fixed nav) and bottom (for icon bar + footer). */
+    .container {
+        background-color: var(--mac-white) !important;
+        background-image: none !important;
+        padding-top: 34px;
+        padding-bottom: 110px;
+    }
+
+    /* === STICKY TOP NAV ============================================
+       Pin the existing nav to the top of the viewport. Keep its
+       desktop white background, black underline, and inner styling. */
+    .terminal-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        z-index: 1000;
+    }
+
+    /* Main: invisible wrapper on mobile (no window-frame border) */
+    main {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 -10px !important;
+        max-width: none !important;
+        flex: 0 1 auto;
+    }
+
+    /* White, compact content area. NOTE: only the wrapper padding
+       is tightened — all in-page styling inside is left untouched.
+       Right padding reserves room for the decorative scrollbar. */
+    .window-content {
+        background-color: var(--mac-white) !important;
+        padding: 8px 22px 8px 10px !important;
+        overflow: visible !important;
+        flex: 0 1 auto;
+        position: relative;
+    }
+
+    /* Decorative vertical scrollbar on the right edge of content.
+       Purely visual: position: fixed so it stays put (doesn't move with
+       scroll), pointer-events: none and user-select: none so it can't
+       be interacted with. */
+    .window-content::after {
+        content: "";
+        position: fixed;
+        top: 36px;            /* just below the fixed top nav */
+        right: 0;
+        bottom: 86px;          /* clear of the sticky icon bar + footer */
+        width: 14px;
+        background:
+            linear-gradient(
+                to bottom,
+                transparent 0,
+                transparent 30%,
+                var(--mac-dark-gray) 30%,
+                var(--mac-dark-gray) 60%,
+                transparent 60%,
+                transparent 100%
+            ),
+            var(--mac-gray);
+        border-left: 1px solid var(--mac-black);
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-select: none;
+        z-index: 999;
+    }
+
+    /* === STICKY BOTTOM — SINGLE GRAY ICON BAR =======================
+       One unified gray container holding all five icons. Icons no
+       longer get individual boxes — they sit inside the single bar.
+       Padding is symmetric so icons get equal space above and below. */
+    .mac-sidebar {
+        display: flex !important;
+        flex-direction: row;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 22px;            /* sits on top of the mobile-footer */
+        top: auto;
+        z-index: 1000;
+        gap: 12px;
+        align-items: center;
+        background-color: var(--mac-gray);
+        border-top: 2px solid var(--mac-black);
+        border-bottom: 1px solid var(--mac-black);
+        padding: 8px 14px;
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.5),
+            inset 0 -1px 0 var(--mac-dark-gray);
+    }
+
+    /* Icons inside the gray bar — strip the individual-box styling
+       and use a fixed-size container so flex layout matches the
+       scaled visual size (no overflow into the bar's padding). */
+    .mac-sidebar .mac-icon {
+        width: 44px !important;
+        height: 44px !important;
+        flex: 0 0 auto;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+    .mac-sidebar .mac-icon:hover { transform: none; }
+
+    /* Scale icon graphics up (was 0.5/0.55) and drop the negative
+       margins that were pulling them off-center. */
+    .mac-sidebar .doc-icon,
+    .mac-sidebar .github-icon,
+    .mac-sidebar .mail-icon,
+    .mac-sidebar .linkedin-icon,
+    .mac-sidebar .trash-icon {
+        transform: scale(0.7);
+        transform-origin: center center;
+        margin: 0 !important;
+    }
+
+    /* Trash separated with a visible gap, pushed to far right */
+    .mac-sidebar .mac-icon:has(.trash-icon) {
+        margin-left: auto !important;
+    }
+
+    /* Icon names hidden in the mobile bar — icons only */
+    .mac-sidebar .icon-label {
+        display: none !important;
+    }
+
+    /* Fix the mail-icon flap: shrink and center it so the triangle
+       sits cleanly inside the envelope rectangle. */
+    .mac-sidebar .mail-icon::before {
+        border-width: 12px 22px 0 22px !important;
+        left: 4px !important;
+        bottom: 4px !important;
+    }
+    .mac-sidebar .mail-icon::after {
+        border-width: 10px 20px 0 20px !important;
+        left: 6px !important;
+        bottom: 6px !important;
+    }
+
+    /* === STICKY MIT LICENSE FOOTER — UNDER THE ICON BAR =============
+       White background, black text. Text marquees horizontally. */
+    .mobile-footer {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        background-color: var(--mac-white) !important;
+        color: var(--mac-black) !important;
+        font-size: 10px;
+        font-family: Chicago, Monaco, "Courier New", monospace;
+        padding: 4px 0;
+        text-align: left;
+        border-top: 1px solid var(--mac-black);
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 1 !important;
+    }
+
+    /* Marquee: text starts off-screen right, scrolls left, loops.
+       padding-left: 100% pushes the text past the right edge of the
+       footer; translateX(-100%) of the span (footer + text width)
+       moves it fully off-screen left. Both ends are off-screen so
+       the loop is invisible. */
+    .mobile-footer .mobile-footer-text {
+        display: inline-block;
+        padding-left: 100%;
+        white-space: nowrap;
+        animation: mobile-footer-marquee 22s linear infinite;
+        will-change: transform;
+    }
+
+    @keyframes mobile-footer-marquee {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
 }

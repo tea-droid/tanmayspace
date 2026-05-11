@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Background"
 ---
 
 Hello there, I am Tanmay Sharma. I like to make intricate and cool projects by combining the worlds of Security, Programming and Hardware.

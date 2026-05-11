@@ -10,7 +10,7 @@ title = "tanmayspace"
 
 [menu]
   [[menu.main]]
-    name = "/about"
+    name = "/background"
     url = "/about/"
     weight = 1
 
