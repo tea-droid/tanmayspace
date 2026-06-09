@@ -160,7 +160,7 @@ html::after {
 
 /* Default text if no data attribute is set */
 html:not([data-bezel-text])::after {
-    content: "MIT License | Designed by clankhead, powered by Hugo + Terminal CSS.";
+    content: "MIT License | Designed by tea-droid, powered by Hugo + Terminal CSS.";
 }
 
 /* Ambient light overlay for extra polish */
