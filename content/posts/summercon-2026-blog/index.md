@@ -94,3 +94,33 @@ The starting point was that ROP is not really feasible in 2026, and DarkSword is
 The strategies for dealing with a lack of shellcode were laid out as options: wire up a native bridge to an interpreter, pray for a JIT and just live there, find some really useful objects, or fall back to JOP. The demonstration used armv8-a on Linux, working within the armv8-a calling convention, and built on context-oriented programming. The key field is uc_link, which holds the address of the next context to jump to.
 
 For the primitives, the capture gadget was built from malloc(n), pthread_create, and pthread_join. Computation was done through a lookup table (LUT) laid out as i by j at 256 by 256. Storage went into open file descriptors, writing to them and using pread and pwrite for access. Indexing into the LUT was how arithmetic got implemented, so addition became looking up i plus j, and the table itself was built with a nested for loop. There was also a swab-based path, where memcpy into swab into memcpy did the work. On top of this, COPr carries its own version of the GOT and its own version of the got.plt, giving the weird machine an ELF-like structure to resolve against.
+
+---
+
+## Back to the Future: Owning Systems of the Past
+by Nick Gregory & Brendan Dolan-Gavitt
+
+The framing from the presenters was that the 80s, 90s, and early 00s were a wild time in computing. Things moved at a rapid clip, technology still had style, and strange ideas were everywhere, right down to machines that only ran Lisp. Their question was simple: can we go back and hack all of it? What followed was a process for pwning most every old operating system you have heard of, and a few you probably have not. In total they presented 16 zero-days across 12 platforms spanning 8 architectures, and walked through what it took to emulate these vintage systems, how they convinced an AI to reverse engineer them, and how they got it to write 90s style keygens to unblock itself so it could keep going.
+
+The two big roadblocks were emulation and licensing. Emulation was the harder engineering problem, and licensing was solved the way these things tend to get solved on old software. For getting the AI to actually understand the binaries, they used two strategies. The first was a Ghidra MCP so the model could drive the decompiler directly. The second was pre-decompilation, where they decompiled the target ahead of time and then ran the LLM over the output.
+
+On emulation, one of the tricky cases was running VAX on Alpha, largely because of VAX floating point, which is not IEEE. The workhorse for most of the effort was QEMU, chosen because it gives you snapshots, good performance, and it is free.
+
+The targets and the systems they ran on were:
+
+1. Mosaic 2.4 on OpenVMS VAX 7.3, through an xpm file at 8299 bytes
+2. Netscape 4.07 on RHEL 5.2 i386
+3. Netscape 5 on RHEL 5.2 i386
+4. IE 5 on Solaris 2.6 on SPARC, where they found two vulnerabilities
+5. The Compaq Secure Web Browser on OpenVMS Alpha
+6. NetPositive 2.2 on BeOS 5.0 PPC
+7. talkd on NeXTSTEP 3.3
+8. Mac OS 9.2.1 on i386
+9. Windows 98 SE on i386
+10. IRIX 6.5 on MIPS
+11. Tru64 on Alpha, through the ToolTalk database
+12. An FTP daemon on a Symbolics virtual Lisp machine on Tru64 Alpha
+
+This concludes all the talks that I liked or was able to cover. There was one more talk I really wish I had taken notes on. The presenter just wanted an app for his intercom system, so he hooked the intercom up to his laptop and prompted Claude to build it for him. Instead of pulling only his own camera feed, Claude ended up fetching the feeds for his entire building. It was hilarious. He poked around from there and managed to map every single intercom system in his housing complex, which was somewhere upwards of 500 apartments. And after all that, he still did not have his app by the end of it.
+
+All in all it was a wonderful two days where I learnt a lot and met a lot of cool people. It even ended with a group called "entirely from memory" who came up and performed an improv version of the Matrix, which was super hilarious.
