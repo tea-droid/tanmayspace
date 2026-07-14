@@ -19,7 +19,7 @@ The trip started at my hotel. I was already running late because of some credit 
 So I won't pretend I was there and hand you a fake experience, but if you want to watch them, you can head to the summercon youtube page where all the talks are posted. Starting off with the first talk that I actually attended:
 
 ## Hunting for North Korean Malware
-by Ramazan Uysal
+>by Ramazan Uysal
 
 Some parts of this talk I could not cover since the author marked them as TLP:RED, so I have left those out here.
 
