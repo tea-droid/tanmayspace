@@ -7,6 +7,13 @@ tags: ["cybersecurity", "summercon", "conference", "malware", "north-korea", "io
 
 I have always loved going to security meetups. When I first moved to Boston, it was meetups like OWASP Boston, Boston Security, and my favourite, Boston Hackers, that pulled me in. Now I am just back from the second day of the biggest security conference I have ever been to, sitting on my bed in a nice hotel in NYC and writing this blog post (unlike some nerds who are probably partying at the Lucky 13 Saloon).
 
+<div style="display: flex; gap: 10px;">
+  <img src="images/mantheshells.jpeg" alt="SummerCon poster 1" style="width: 33%;">
+  <img src="images/getroot.jpeg" alt="SummerCon poster 2" style="width: 33%;">
+  <img src="images/tor3guys.jpeg" alt="SummerCon poster 3" style="width: 33%;">
+</div>
+*A few of the posters from around the venue*
+
 The main reason I am writing this blog is to revisit all the talks I listened to at the con, and hopefully express what I felt there to everyone who couldn't make it. Given that this was my first actual hacking conference, I was in awe of most of it, so if you end up thinking, "Man, this guy is positive about everything, was he paid by summercon??", the answer is no. And yes, I am mostly positive. There were a few things I thought were bad, but they add up to maybe 0.03% of the whole thing.
 
 Okay, enough bullshit. Allow me to take you on a journey where I narrate my trip to my first hacking conference, SummerCon 2026.
