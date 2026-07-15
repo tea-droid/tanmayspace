@@ -12,7 +12,7 @@ I have always loved going to security meetups. When I first moved to Boston, it 
   <img src="images/getroot.jpeg" alt="SummerCon poster 2" style="width: 33%;">
   <img src="images/tor3guys.jpeg" alt="SummerCon poster 3" style="width: 33%;">
 </div>
-*A few of the posters from around the venue*
+*A few of the posters from around the venue*  
 
 The main reason I am writing this blog is to revisit all the talks I listened to at the con, and hopefully express what I felt there to everyone who couldn't make it. Given that this was my first actual hacking conference, I was in awe of most of it, so if you end up thinking, "Man, this guy is positive about everything, was he paid by summercon??", the answer is no. And yes, I am mostly positive. There were a few things I thought were bad, but they add up to maybe 0.03% of the whole thing.
 
