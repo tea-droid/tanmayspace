@@ -13,13 +13,13 @@ Okay, enough bullshit. Allow me to take you on a journey where I narrate my trip
 
 The trip started at my hotel. I was already running late because of some credit card problems that morning, and I ended up missing the first two talks, namely
 
-- [insert first talk name]
-- [insert second talk name]
+- Building a Windows N-Day Exploit Chain for RasMan 
+- Unlocking cars: Reversing a Rolling Code like a boss 
 
-So I won't pretend I was there and hand you a fake experience, but if you want to watch them, you can head to the summercon youtube page where all the talks are posted. Starting off with the first talk that I actually attended:
+So I won't pretend I was there and hand you a fake experience, but if you want to watch them, you can head to the summercon youtube page where all the talks are posted. What follows are my top five talks from the con, the ones I keep coming back to since getting home. Starting off with the first talk that I actually attended:
 
 ## Hunting for North Korean Malware
->by Ramazan Uysal
+by Ramazan Uysal
 
 Some parts of this talk I could not cover since the author marked them as TLP:RED, so I have left those out here.
 
@@ -38,15 +38,6 @@ The delivery techniques covered were embedded payloads, over 2000 malicious NPM 
 The talk closed with practical hunting tips. You can pivot on the AstrillVPN usage, on the email patterns, and on the Referer header. On the Referer side, a Bitbucket link shared on LinkedIn is most probably a scam, and the same caution applies to links coming through Freelancer, Upwork, and AI or LLM tooling. Beyond that, hunt on the repository names, on the NPM indicators of compromise, and with YARA rules.
 
 The second talk that I enjoyed on day 1 was a bit more technical and it was hiding some really complex concepts behind a very fun topic of game hacking.
-
-## Learning Rosetta through hacking games!
-by Nicole Reichert
-
-[insert notes here]
-
----
-
-Though I wanted to cover more talks, my laptop's battery died and could not write my notes. So we move on to the second day of summercon.
 
 ---
 
@@ -121,6 +112,8 @@ The targets and the systems they ran on were:
 11. Tru64 on Alpha, through the ToolTalk database
 12. An FTP daemon on a Symbolics virtual Lisp machine on Tru64 Alpha
 
-This concludes all the talks that I liked or was able to cover. There was one more talk I really wish I had taken notes on. The presenter just wanted an app for his intercom system, so he hooked the intercom up to his laptop and prompted Claude to build it for him. Instead of pulling only his own camera feed, Claude ended up fetching the feeds for his entire building. It was hilarious. He poked around from there and managed to map every single intercom system in his housing complex, which was somewhere upwards of 500 apartments. And after all that, he still did not have his app by the end of it.
+Watching this many machines get cracked open, some of them older than I am, with an AI doing a good chunk of the reverse engineering, made for one of the most entertaining closers of the whole conference. That wraps up every talk I could cover, though there is one more I wish I had taken proper notes on. The presenter just wanted an app for his intercom system, so he hooked it up to his laptop and prompted Claude to build it for him. Instead of pulling only his own camera feed, Claude ended up fetching the feeds for his entire building, which was hilarious. He poked around from there and managed to map every single intercom system in his housing complex, somewhere upwards of 500 apartments, and after all that, he still did not have his app by the end of it.
 
-All in all it was a wonderful two days where I learnt a lot and met a lot of cool people. It even ended with a group called "entirely from memory" who came up and performed an improv version of the Matrix, which was super hilarious.
+All in all it was a wonderful two days where I learnt a lot and met a lot of cool people, and it even ended with a group called "entirely from memory" who came up and performed an improv version of the Matrix, which was super hilarious. But beyond the talks and the laughs, this conference reminded me why I am doing any of this in the first place. Talking to presenters working across such different corners of cybersecurity, from malware hunting to browser exploitation to adversary modeling to compiler level implants, made it clear how much I genuinely enjoy this field, and it kept me on track with where I want to end up, whether that is as a pentester or a security architect someday. I learned something from every single one of them, and I am already looking forward to the next one.
+
+And since I promised earlier to tell you what made up that infamous 0.03%, here it is: the only real letdown of the whole con was the food sponsorships. Tacos on Friday, pizza on Saturday, and that was about it. The tacos were chicken only with no veg option in sight, and the pizza on day two was just plain bad.
