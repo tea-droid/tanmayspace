@@ -70,7 +70,16 @@ What is still missing is a world model bound to the LLM. An LLM cannot look at a
 
 The defensive framework was Effects Based Operations (EBO), which is about taking actions to achieve a specific effect. Cross laid these out on a spectrum from low to high impact: endpoint hardening, blocking country IPs, exiting a market, account throttling, and vulnerability injection. The organizing question is how you can put pressure on your adversary.
 
+![Image : Full spectrum capabilities of companies](images/full_power_of_companies.jpeg)
+*A slide mapping ordinary corporate technology to offensive capabilities, from spying and real world mapping to denying access and destroying things*
+
+![Image : Example adversary decision points for ransomware](images/example_adversary_decision_points.jpeg)
+*A worked example of defender EBO levers and their desired effects, mapped against a ransomware operator's decision points*
+
 To decide where to apply that pressure, he brought in Center of Gravity (COG) analysis, which is how the military decides what to hit. It breaks down into centers of gravity, critical capabilities, critical requirements, and critical vulnerabilities. Here critical vulnerabilities are not CVEs, they are the things that can break the operation. The mental model is to find the small pebble that has to be maintained for a specific application to work, and then break that pebble.
+
+![Image : COG Applications diagram](images/cogapplication.jpeg)
+*The COG Applications slide, showing the threat actor and defender each running COG analysis on themselves and on each other*
 
 As a real example, someone had hacked LockBit's admin panel (work attributed to jambul), which is worth going to look at. Part of the takeaway there was that LockBit used Mega instead of S3, and Mega is a bad choice, so again the lesson is to look for the pebble.
 
