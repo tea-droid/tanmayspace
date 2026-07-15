@@ -8,9 +8,9 @@ tags: ["cybersecurity", "summercon", "conference", "malware", "north-korea", "io
 I have always loved going to security meetups. When I first moved to Boston, it was meetups like OWASP Boston, Boston Security, and my favourite, Boston Hackers, that pulled me in. Now I am just back from the second day of the biggest security conference I have ever been to, sitting on my bed in a nice hotel in NYC and writing this blog post (unlike some nerds who are probably partying at the Lucky 13 Saloon).
 
 <div style="display: flex; gap: 10px;">
-  <img src="images/mantheshells.jpeg" alt="SummerCon poster 1" style="width: 33%;">
-  <img src="images/getroot.jpeg" alt="SummerCon poster 2" style="width: 33%;">
-  <img src="images/tor3guys.jpeg" alt="SummerCon poster 3" style="width: 33%;">
+  <img src="images/mantheshells.jpeg" alt="SummerCon poster 1" style="width: 33%; height: 220px; object-fit: cover;">
+  <img src="images/getroot.jpeg" alt="SummerCon poster 2" style="width: 33%; height: 220px; object-fit: cover;">
+  <img src="images/tor3guys.jpeg" alt="SummerCon poster 3" style="width: 33%; height: 220px; object-fit: cover;">
 </div>
 *A few of the posters from around the venue*  
 
