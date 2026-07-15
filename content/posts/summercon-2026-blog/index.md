@@ -1,5 +1,5 @@
 ---
-title: "SummerCon 2026: My First Hacking Conference"
+title: "Visiting SummerCon 2026"
 author: "Tanmay Sharma"
 date: 2026-07-14
 tags: ["cybersecurity", "summercon", "conference", "malware", "north-korea", "ios", "webkit", "exploitation", "threat-intelligence"]
@@ -43,8 +43,6 @@ Infrastructure choices are another tell. The VPN and proxy providers of choice w
 The delivery techniques covered were embedded payloads, over 2000 malicious NPM dependencies (the most heavily used vector), Git hooks (which have risen recently, where a script placed in a .githooks/pre-commit hook runs before any GitHub action), VSCode autorun, and fake font files. Socket.dev has published research specifically on the backdoored NPM packages in this space.
 
 The talk closed with practical hunting tips. You can pivot on the AstrillVPN usage, on the email patterns, and on the Referer header. On the Referer side, a Bitbucket link shared on LinkedIn is most probably a scam, and the same caution applies to links coming through Freelancer, Upwork, and AI or LLM tooling. Beyond that, hunt on the repository names, on the NPM indicators of compromise, and with YARA rules.
-
-The second talk that I enjoyed on day 1 was a bit more technical and it was hiding some really complex concepts behind a very fun topic of game hacking.
 
 ---
 
