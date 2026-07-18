@@ -65,7 +65,7 @@ Experienced Technical Lead and Project Intern with a background in cybersecurity
       <small>Boston, MA</small>
       <ul>
         <li>Collaborated on reverse engineering the EdgeTPU driver on Pixel devices, analyzing its interaction with firmware, which enhanced the lab’s understanding of hardware security layers</li>
-        <li>Analyzed FirmXRay software by OSUSecLab, focusing on baseaddresssolver.java module, to identify how base addresses are resolved and features extracted, improving vulnerability assessment               capabilities in embedded firmware.</li>
+        <li>Analyzed FirmXRay software by OSUSecLab, focusing on baseaddresssolver.java module, to identify how base addresses are resolved and features extracted, improving vulnerability assessment capabilities in embedded firmware.</li>
       </ul>
     </div>
   </div>
@@ -119,8 +119,8 @@ Experienced Technical Lead and Project Intern with a background in cybersecurity
   <div class="terminal-card">
     <header>Certifications</header>
     <div>
-      <p><strong>Completed:</strong> [CompTIA Security+](https://www.credly.com/badges/4dcce657-cbad-4be2-b84e-c320ada65664/public_url),  AWS Academy Cloud Security Foundations</p>
-      <p><strong>In Progress:</strong> PNPT (Practical Network Penetration Tester)</p>
+      <p><strong>Completed:</strong> [PNPT](), [CompTIA Security+](https://www.credly.com/badges/4dcce657-cbad-4be2-b84e-c320ada65664/public_url),  AWS Academy Cloud Security Foundations</p>
+      <p><strong>In Progress:</strong> OSCP</p>
     </div>
   </div>
 
