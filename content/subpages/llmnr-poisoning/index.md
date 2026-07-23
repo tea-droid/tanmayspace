@@ -37,7 +37,7 @@ Step 4. Crack the hash using something like hashcat
 ![Pasted image 20260205141846](images/Pasted-image-20260205141846.png)
 3. Then I just cracked these hashes on my local machine (not attacker) for faster speeds. 
 	- `hashcat --help | grep NTLM` --> to find the module for NetNTLMv2 hash --> output: `5600` (or google it)
-	- `hashcat -m 5600 hashes.txt -w /usr/share/wordlists/rockyou.txt` --> 
+	- `hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt` --> 
 	- Some Important hashcat flag:
 		- `-show` -> show cracked hashes from potfile (if any)
 		- `-force` -> if trying on VM and it doesn't work
